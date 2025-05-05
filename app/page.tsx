@@ -2,6 +2,8 @@ import BottomNavBar from "@/components/bottomNavbar";
 import { ImageCarousel } from "@/components/carousel";
 import { CategoryCard } from "@/components/category";
 import { CollectionSection } from "@/components/collections";
+import Search from "@/components/search";
+import { Input } from "@/components/ui/input";
 import Image from "next/image";
 
 const smartphoneDeals = [
@@ -33,9 +35,26 @@ const images = [
   { src: "/images/banner5.jpg", alt: "Third Slide" },
 ];
 
+const items = [
+  'Electronics',
+  'Fashion',
+  'Home Decor',
+  'Books',
+];
+
+
 export default function Home() {
   return (
     <div className="bg-accent relative min-h-screen">
+
+<div className="md:hidden px-5 py-5 bg-blue-100 sticky top-0 z-20">
+  <Input
+    placeholder="Search..."
+    className="bg-white h-12 w-full max-w-md p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  />
+</div>
+
+
       <div className="pb-20 sm:pb-0"> 
         {/* Categories */}
         <div className="flex overflow-x-auto gap-4 px-6 py-4 scrollbar-hidden">
