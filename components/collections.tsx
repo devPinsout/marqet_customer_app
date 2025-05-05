@@ -14,7 +14,7 @@ interface CollectionSectionProps {
 
 export function CollectionSection({ heading, products }: CollectionSectionProps) {
   return (
-    <div className="px-4 py-6">
+    <div className="px-2 py-6">
       <h2 className=" text-xl sm:text-2xl font-bold text-gray-800 mb-4">{heading}</h2>
       <div className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hidden">
         {products.map((product, index) => (

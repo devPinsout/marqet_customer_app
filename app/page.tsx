@@ -47,7 +47,7 @@ export default function Home() {
   return (
     <div className="bg-accent relative min-h-screen">
 
-<div className="md:hidden px-5 py-5 bg-blue-100 sticky top-0 z-20">
+<div className="md:hidden px-2 py-5 bg-blue-100 sticky top-0 z-20">
   <Input
     placeholder="Search..."
     className="bg-white h-12 w-full max-w-md p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -57,7 +57,7 @@ export default function Home() {
 
       <div className="pb-20 sm:pb-0"> 
         {/* Categories */}
-        <div className="flex overflow-x-auto gap-4 px-6 py-4 scrollbar-hidden">
+        <div className="flex overflow-x-auto gap-4 px-2 py-4 scrollbar-hidden">
           {categories.map((cat, index) => (
             <div key={index} className="flex-shrink-0">
               <CategoryCard name={cat.name} imageSrc={cat.imageSrc} />
@@ -66,16 +66,16 @@ export default function Home() {
         </div>
 
         {/* Carousel */}
-        <div className="container px-5 py-5">
+        <div className="container px-2 py-5">
           <ImageCarousel images={images} />
         </div>
 
         {/* Collections */}
-        <div className="flex flex-col bg-white mx-5">
+        <div className="flex flex-col bg-white mx-2">
           <CollectionSection heading="Best Deals on Smartphones" products={smartphoneDeals} />
         </div>
 
-        <div className="flex flex-col bg-white mx-5 mt-5">
+        <div className="flex flex-col bg-white mx-2 mt-5">
           <CollectionSection heading="Best Deals on Smartphones" products={smartphoneDeals} />
         </div>
       </div>

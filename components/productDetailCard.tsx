@@ -27,17 +27,19 @@ export default function ProductDetail({
       <div className="flex flex-col-reverse md:flex-row gap-4 md:w-1/2">
         
         {/* Thumbnail list */}
-        <div className="flex flex-row md:flex-col gap-2 overflow-x-auto md:overflow-y-auto md:max-h-[400px]">
+        <div className="flex flex-row  md:flex-col gap-2 overflow-x-auto md:overflow-y-auto md:max-h-[400px]">
           {images.map((img, index) => (
             <Image
+              
               key={index}
               src={img}
               alt={`Thumbnail ${index}`}
               width={60}
-              height={60}
-              className={`cursor-pointer border ${
+              objectFit="fill"
+              height={50}
+              className={`p-2 cursor-pointer border ${
                 selectedImage === img ? "border-blue-500" : "border-gray-300"
-              }`}
+              }` }
               onClick={() => setSelectedImage(img)}
             />
           ))}

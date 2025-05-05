@@ -71,11 +71,11 @@ export default function CollectionPage() {
   return (
     <div className="bg-accent">
 
-      <div className="bg-white px-5 py-5 flex flex-col gap-5">
+      <div className="bg-white px-2 py-5 flex flex-col gap-5">
       <h1 className="text-lg sm:text-2xl font-bold capitalize">
   {collectionName?.toString().replace(/-/g, " ")}
 </h1>
-<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-4">
+<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-2">
       {products.map((product, index) => (
         <CollectionListCard key={index} {...product} />
       ))}

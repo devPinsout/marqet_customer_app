@@ -36,7 +36,7 @@ export function CollectionListCard({
   const productSlug = slugify(title); 
   return (
     <Link href={`/product/${productSlug}`} passHref>
-      <div className="flex flex-col sm:flex-row justify-between gap-0 sm:gap-10 w-full border border-gray-300 overflow-hidden shadow-sm hover:shadow-md transition duration-200 bg-white px-4 py-5 sm:px-5 sm:py-5 rounded-md cursor-pointer">
+      <div className="flex flex-col sm:flex-row justify-between gap-0 sm:gap-10 w-full border border-gray-300 overflow-hidden shadow-sm hover:shadow-md transition duration-200 bg-white px-2 py-2 sm:px-5 sm:py-5 rounded-md cursor-pointer">
         
         {/* Image Section */}
         <div className="relative w-full sm:w-1/3 h-[150px] sm:h-[200px]">
@@ -74,7 +74,7 @@ export function CollectionListCard({
 
         {/* Price and Delivery Date Section */}
         <div className="flex flex-col gap-2 sm:w-1/4 w-full">
-          <h1 className="text-xl sm:text-3xl font-semibold">₹ {price.toLocaleString()}</h1>
+          <h1 className="text-sm sm:text-3xl font-semibold">₹ {price.toLocaleString()}</h1>
 
           {originalPrice && discount && (
             <div className="flex gap-2 text-sm sm:text-base">
