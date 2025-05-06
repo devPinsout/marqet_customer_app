@@ -4,6 +4,7 @@ import { CategoryCard } from "@/components/category";
 import { CollectionSection } from "@/components/collections";
 import Search from "@/components/search";
 import { Input } from "@/components/ui/input";
+import { SearchIcon } from "lucide-react";
 import Image from "next/image";
 
 const smartphoneDeals = [
@@ -47,11 +48,16 @@ export default function Home() {
   return (
     <div className="bg-accent relative min-h-screen">
 
-<div className="md:hidden px-2 py-5 bg-blue-100 sticky top-0 z-20">
-  <Input
+<div className="md:hidden px-4 py-5 justify-between bg-white sticky top-0 z-20 flex items-center gap-2">
+
+  <Image src='/images/logo.png' alt="" height={70} width={70}/>
+
+  <SearchIcon/>
+  {/* <Input
     placeholder="Search..."
+    readOnly
     className="bg-white h-12 w-full max-w-md p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-  />
+  /> */}
 </div>
 
 

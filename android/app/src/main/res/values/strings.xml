@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">customerapp</string>
+    <string name="title_activity_main">customerapp</string>
+    <string name="package_name">com.marqet.customer</string>
+    <string name="custom_url_scheme">com.marqet.customer</string>
+</resources>

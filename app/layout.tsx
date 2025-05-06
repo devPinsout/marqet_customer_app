@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import PageTransitionWrapper from "@/components/pageTransitionWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,7 +50,7 @@ export default function RootLayout({
         <div className="hidden sm:block">
          <Navbar />
         </div>
-        {children}
+        <PageTransitionWrapper>{children}</PageTransitionWrapper>
         <div className="hidden sm:block">
          <Footer />
         </div>

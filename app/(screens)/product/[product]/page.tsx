@@ -1,3 +1,4 @@
+import BackButton from "@/components/backButton";
 import ProductDetail from "@/components/productDetailCard";
 
 
@@ -16,8 +17,10 @@ export default function ProductPage() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto mt-0 sm:mt-10">
-      <ProductDetail {...product} />
-    </div>
+    <div className=" mx-auto mt-0 sm:mt-10 sm:px-4">
+    <BackButton label={product.title} />    
+
+    <ProductDetail {...product} />
+  </div>
   );
 }

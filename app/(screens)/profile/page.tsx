@@ -3,6 +3,7 @@ import BottomNavBar from "@/components/bottomNavbar";
 import { ProfileSection } from "@/components/profileSection";
 import { Button } from "@/components/ui/button";
 import { UserProfileCard } from "@/components/userProfileCard";
+import Link from "next/link";
 
 export default function ProfilePage() {
   return (
@@ -26,10 +27,13 @@ export default function ProfilePage() {
         </ProfileSection>
 
         <ProfileSection title="Order History">
-          <Button variant="ghost" className="w-full justify-start">
-            View Past Orders
-          </Button>
-        </ProfileSection>
+  <Link href="/orders" className="w-full">
+    <Button variant="ghost" className="w-full justify-start">
+      Orders
+    </Button>
+  </Link>
+</ProfileSection>
+
 
         <ProfileSection title="Help & Support">
           <Button variant="ghost" className="w-full justify-start">

@@ -36,7 +36,7 @@ export function ImageCarousel({
           {images.map((image, index) => (
             <CarouselItem key={index}>
               <div
-                className="relative w-full h-[200px] sm:h-[300px] md:h-[400px]"
+                className="relative w-full h-[150px] sm:h-[300px] md:h-[400px]"
               >
                 <Image
                   src={image.src}
