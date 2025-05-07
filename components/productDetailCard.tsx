@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -24,6 +25,7 @@ export default function ProductDetail({
   images,
   price,
 }: ProductDetailProps) {
+  const router = useRouter();
   const [selectedImage, setSelectedImage] = useState(images[0]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -185,8 +187,19 @@ export default function ProductDetail({
 
             {/* Mobile buttons */}
             <div className=" w-full flex  gap-3 md:hidden mt-2">
-              <Button className="w-1/2 bg-accent hover:bg-blue-700 text-black border border-foreground">Add to Cart</Button>
-              <Button className="w-1/2 bg-green-600 hover:bg-green-700 text-white">Buy Now</Button>
+            <Button
+          className="w-1/2 bg-accent hover:bg-accent text-black border border-foreground"
+          onClick={() => router.push("/cart")}
+        >
+          Add to Cart
+        </Button>
+
+        <Button
+          className="w-1/2 bg-green-600 hover:bg-green-700 text-white"
+          onClick={() => router.push("/cart")}
+        >
+          Buy Now
+        </Button>
             </div>
           </>
         )}

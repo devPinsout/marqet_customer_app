@@ -43,7 +43,7 @@ export default function FilterSheet({ filtersData, selectedOptions, setSelectedO
   };
 
   return (
-    <div className="flex flex-col h-[90vh] bg-white rounded-lg overflow-hidden border">
+    <div className="flex flex-col h-full bg-white rounded-lg overflow-hidden border">
      
       <div className="flex flex-1 overflow-auto">
         {/* Sidebar */}

@@ -1,3 +1,4 @@
+import BackButton from "@/components/backButton";
 import BottomNavBar from "@/components/bottomNavbar";
 import { CartItem } from "@/components/cartItem";
 import { CartSummary } from "@/components/cartSummary";
@@ -17,6 +18,12 @@ export default function CartPage() {
       quantity: 1,
       image: "/images/iphone.png",
     },
+    {
+      title: "iphone15",
+      price: 11200000,
+      quantity: 1,
+      image: "/images/iphone.png",
+    },
   ];
 
   const total = cartItems.reduce(
@@ -25,21 +32,28 @@ export default function CartPage() {
   );
 
   return (
-    <div className="bg-muted min-h-screen relative">
-      <div className="pb-24 px-4 pt-4">
-        <h1 className="text-xl font-semibold mb-4">Your Cart</h1>
+    <div className="bg-white min-h-screen relative">
+      
+      <div className="fixed top-0 left-0 right-0 z-50 bg-muted px-2 py-3 flex items-center justify-center">
+        <h1 className="text-[18px] font-semibold">My Cart</h1>
+      </div>
 
-        <div className="space-y-4">
+      <div className="pt-16 pb-24"> 
+        <div className="">
           {cartItems.map((item, index) => (
             <CartItem key={index} {...item} />
           ))}
-        </div>
 
-        <CartSummary total={total} />
+          <div className="px-4">
+          <CartSummary total={total} />
 
-        <Button className="w-full mt-6" size="lg">
-          Proceed to Checkout
-        </Button>
+<Button className="w-full mt-6" size="lg">
+  Proceed to Checkout
+</Button>
+
+          </div>
+
+          </div>
       </div>
 
       <BottomNavBar />

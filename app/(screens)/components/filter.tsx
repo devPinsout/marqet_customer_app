@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
-import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetClose } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetClose, SheetTitle } from "@/components/ui/sheet";
 import CategoryFilter from "@/components/categoryFilter";
 import PriceFilter from "@/components/priceFilter";
 import BrandFilter from "@/components/brandFilter";
@@ -86,7 +86,9 @@ export default function FilterSection() {
 
           </SheetTrigger>
           <SheetContent side="bottom" className="py-5">
-          <SheetHeader className="hidden"></SheetHeader>
+          <SheetHeader className="hidden">
+            <SheetTitle></SheetTitle>
+          </SheetHeader>
           <RadioFilter
   title="Sort By"
   options={sortOptions}
@@ -108,7 +110,7 @@ export default function FilterSection() {
 
           </SheetTrigger>
           <SheetContent side="left" className="p-0 m-0 h-screen w-screen max-w-full">
-          <SheetHeader className="hidden">Hello</SheetHeader>
+          <SheetHeader className="hidden"><SheetTitle></SheetTitle></SheetHeader>
          
           <div className="w-full h-full">
           <FilterSheet
@@ -133,7 +135,7 @@ export default function FilterSection() {
 
           </SheetTrigger>
           <SheetContent side="bottom" className="py-5">
-          <SheetHeader className="hidden"></SheetHeader>
+          <SheetHeader className="hidden"><SheetTitle></SheetTitle></SheetHeader>
             <BrandFilter
   options={brandOptions}
   selected={brands}
