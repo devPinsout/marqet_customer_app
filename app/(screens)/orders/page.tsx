@@ -37,23 +37,25 @@ export default function OrderPage() {
       <BackButton label="My Orders" />
 
       <div className="flex flex-col">
-        {orders.map((order, index) => (
-          <div key={index}>
-            <OrderItem
-              name={order.productName}
-              imageUrl={order.productImage}
-              isDelivered={order.isDelivered}
-              deliveryDate={order.deliveryDate}
-            //   deliveryDate={
-            //     order.isDelivered ? order.deliveryDate : order.expectedDate
-            //   }
-              rating={order.rating}
-            />
-            {index !== orders.length - 1 && (
-              <div className="border-t border-gray-200" />
-            )}
-          </div>
-        ))}
+    
+
+{orders.map((order, index) => (
+  <div key={index}>
+    <Link href={`/orders/${index}`}>
+      <OrderItem
+        name={order.productName}
+        imageUrl={order.productImage}
+        isDelivered={order.isDelivered}
+        deliveryDate={order.deliveryDate}
+        rating={order.rating}
+      />
+    </Link>
+    {index !== orders.length - 1 && (
+      <div className="border-t border-gray-200" />
+    )}
+  </div>
+))}
+
       </div>
     </div>
   );

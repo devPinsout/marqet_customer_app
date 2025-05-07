@@ -23,9 +23,13 @@ export default function Navbar() {
 
       <div className="flex items-center gap-4">
         <Search/>
-      <Button className="bg-accent-foreground">
+
+        <Link href='/login'>
+        <Button className="bg-accent-foreground">
         Login
       </Button>
+        </Link>
+     
       <Link href='/cart'><ShoppingBag/></Link>
       
       <Link href='/profile'>
